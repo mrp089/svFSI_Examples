@@ -3,11 +3,11 @@
 
 Continue previous simulation: 0
 Number of spatial dimensions: 3
-Number of time steps: 1
-Time step size: 1.0
+Number of time steps: 500
+Time step size: 0.01
 
 Save results to VTK format: 1
-Name prefix of saved VTK files: inflate
+Name prefix of saved VTK files: inflate_mesh_tube
 Increment in saving VTK files: 1
 Start saving after time step: 1
 
@@ -20,22 +20,21 @@ Debug: 0
 #----------------------------------------------------------------
 # Mesh data
 Add mesh: msh {
-   Mesh file path:    mesh_large/mesh-complete.mesh.vtu
-   Fiber direction file path: mesh_large/mesh-complete.mesh.vtu
+   Mesh file path:    mesh_tube/mesh-complete.mesh.vtu
+   Fiber direction file path: mesh_tube/mesh-complete.mesh.vtu
    Add face: start {
-      Face file path: mesh_large/mesh-surfaces/start.vtp
+      Face file path: mesh_tube/mesh-surfaces/start.vtp
    }
    Add face: end {
-      Face file path: mesh_large/mesh-surfaces/end.vtp
+      Face file path: mesh_tube/mesh-surfaces/end.vtp
    }
    Add face: inside {
-      Face file path: mesh_large/mesh-surfaces/inside.vtp
+      Face file path: mesh_tube/mesh-surfaces/inside.vtp
    }
    Add face: outside {
-      Face file path: mesh_large/mesh-surfaces/outside.vtp
+      Face file path: mesh_tube/mesh-surfaces/outside.vtp
    }
    Mesh scale factor: 1.0
-#   Fiber direction: (1, 0, 0)
 }
 
 #----------------------------------------------------------------
@@ -47,7 +46,7 @@ Add equation: struct {
    Tolerance: 1e-7
 
    Constitutive model: stVK
-   Density: 1000.0
+   Density: 0.0
    Elasticity modulus: 1000.0
    Poisson ratio: 0.4
 
