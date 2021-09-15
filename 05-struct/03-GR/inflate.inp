@@ -4,8 +4,8 @@
 Continue previous simulation: 0
 Number of spatial dimensions: 3
 Number of time steps: 11
-Time step size: 1.0
-Spectral radius of infinite time step: 0.0
+Time step size: 1.0e3
+Spectral radius of infinite time step: 1.0
 
 Save results to VTK format: 1
 Name prefix of saved VTK files: inflate_mesh_tube

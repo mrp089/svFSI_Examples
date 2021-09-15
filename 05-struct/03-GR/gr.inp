@@ -37,6 +37,12 @@ Add mesh: msh {
    Add face: outside {
       Face file path: mesh_tube/mesh-surfaces/outside.vtp
    }
+   Add face: x_zero {
+      Face file path: mesh_tube/mesh-surfaces/x_zero.vtp
+   }
+   Add face: y_zero {
+      Face file path: mesh_tube/mesh-surfaces/y_zero.vtp
+   }
    Mesh scale factor: 1.0
 }
 
@@ -46,7 +52,7 @@ Add equation: struct {
    Coupled: 1
    Min iterations: 1
    Max iterations: 20
-   Tolerance: 1e-7
+   Tolerance: 1e-9
 
    Constitutive model: GR_Equilibrated
    Density: 0.0
@@ -67,10 +73,11 @@ Add equation: struct {
 
    LS type: BICG
    {
-      Preconditioner:      FSILS
-      Tolerance:           1D-6
+      Tolerance:           1e-16
+      Absolute tolerance:   1e-16
       Max iterations:      1000
-#      Krylov space dimension: 50
+      Krylov space dimension: 1000
+      Preconditioner:  Trilinos-Diagonal
    }
 
    Add BC: start {
@@ -104,6 +111,18 @@ Add equation: struct {
       Impose on state variable integral: t
       Zero out perimeter: f
    }
+
+#   Add BC: x_zero {
+#      Type: Dir
+#      Value: 0.0
+#      Effective direction: (1, 0, 0)
+#   }
+
+#   Add BC: y_zero {
+#      Type: Dir
+#      Value: 0.0
+#      Effective direction: (0, 1, 0)
+#   }
 
    # step 1: pre-stressing
    Add BC: inside {
