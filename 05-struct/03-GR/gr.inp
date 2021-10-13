@@ -112,17 +112,21 @@ Add equation: struct {
       Zero out perimeter: f
    }
 
-#   Add BC: x_zero {
-#      Type: Dir
-#      Value: 0.0
-#      Effective direction: (1, 0, 0)
-#   }
+   Add BC: x_zero {
+      Type: Dir
+      Value: 0.0
+      Effective direction: (1, 0, 0)
+      Impose on state variable integral: t
+      Zero out perimeter: f
+   }
 
-#   Add BC: y_zero {
-#      Type: Dir
-#      Value: 0.0
-#      Effective direction: (0, 1, 0)
-#   }
+   Add BC: y_zero {
+      Type: Dir
+      Value: 0.0
+      Effective direction: (0, 1, 0)
+      Impose on state variable integral: t
+      Zero out perimeter: f
+   }
 
    # step 1: pre-stressing
    Add BC: inside {

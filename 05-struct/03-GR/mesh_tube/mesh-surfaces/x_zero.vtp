@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <VTKFile type="PolyData" version="0.1" byte_order="LittleEndian" header_type="UInt32" compressor="vtkZLibDataCompressor">
   <PolyData>
-    <Piece NumberOfPoints="8"                    NumberOfVerts="0"                    NumberOfLines="0"                    NumberOfStrips="0"                    NumberOfPolys="2"                   >
+    <Piece NumberOfPoints="10"                   NumberOfVerts="0"                    NumberOfLines="0"                    NumberOfStrips="0"                    NumberOfPolys="4"                   >
       <PointData>
-        <DataArray type="Int64" Name="GlobalNodeID" format="appended" RangeMin="51"                   RangeMax="1152"                 offset="0"                   >
+        <DataArray type="Int64" Name="GlobalNodeID" format="appended" RangeMin="51"                   RangeMax="510"                  offset="0"                   >
         </DataArray>
-        <DataArray type="Float64" Name="FIB_DIR" NumberOfComponents="3" format="appended" RangeMin="1"                    RangeMax="1"                    offset="68"                  >
+        <DataArray type="Float64" Name="FIB_DIR" NumberOfComponents="3" format="appended" RangeMin="1"                    RangeMax="1"                    offset="76"                  >
           <InformationKey name="L2_NORM_RANGE" location="vtkDataArray" length="2">
             <Value index="0">
               1
@@ -15,27 +15,35 @@
             </Value>
           </InformationKey>
         </DataArray>
-        <DataArray type="Float64" Name="varWallProps" format="appended" RangeMin="0.64678"              RangeMax="0.64678"              offset="180"                 >
+        <DataArray type="Float64" Name="varWallProps" NumberOfComponents="6" format="appended" RangeMin="0.94823453681"        RangeMax="1.4168055618"         offset="136"                 >
+          <InformationKey name="L2_NORM_RANGE" location="vtkDataArray" length="2">
+            <Value index="0">
+              0.94823453681
+            </Value>
+            <Value index="1">
+              1.4168055618
+            </Value>
+          </InformationKey>
         </DataArray>
-        <DataArray type="Float64" Name="ids_inside" format="appended" RangeMin="1"                    RangeMax="1"                    offset="232"                 >
+        <DataArray type="Float64" Name="ids_inside" format="appended" RangeMin="0"                    RangeMax="1"                    offset="388"                 >
         </DataArray>
-        <DataArray type="Float64" Name="ids_y_zero" format="appended" RangeMin="0"                    RangeMax="0"                    offset="280"                 >
+        <DataArray type="Float64" Name="ids_start" format="appended" RangeMin="0"                    RangeMax="1"                    offset="436"                 >
         </DataArray>
-        <DataArray type="Float64" Name="ids_start" format="appended" RangeMin="0"                    RangeMax="1"                    offset="320"                 >
+        <DataArray type="Float64" Name="ids_y_zero" format="appended" RangeMin="0"                    RangeMax="0"                    offset="492"                 >
         </DataArray>
-        <DataArray type="Float64" Name="ids_x_zero" format="appended" RangeMin="1"                    RangeMax="1"                    offset="372"                 >
+        <DataArray type="Float64" Name="ids_x_zero" format="appended" RangeMin="1"                    RangeMax="1"                    offset="532"                 >
         </DataArray>
-        <DataArray type="Float64" Name="ids_outside" format="appended" RangeMin="0"                    RangeMax="0"                    offset="420"                 >
+        <DataArray type="Float64" Name="ids_outside" format="appended" RangeMin="0"                    RangeMax="1"                    offset="580"                 >
         </DataArray>
-        <DataArray type="Float64" Name="ids_end" format="appended" RangeMin="0"                    RangeMax="1"                    offset="460"                 >
+        <DataArray type="Float64" Name="ids_end" format="appended" RangeMin="0"                    RangeMax="1"                    offset="624"                 >
         </DataArray>
       </PointData>
       <CellData>
-        <DataArray type="Int64" Name="GlobalElementID" format="appended" RangeMin="51"                   RangeMax="151"                  offset="512"                 >
+        <DataArray type="Int64" Name="GlobalElementID" format="appended" RangeMin="50"                   RangeMax="200"                  offset="676"                 >
         </DataArray>
-        <DataArray type="Int64" Name="GlobalNodeID" format="appended" RangeMin="652"                  RangeMax="752"                  offset="556"                 >
+        <DataArray type="Int64" Name="GlobalNodeID" format="appended" RangeMin="204"                  RangeMax="357"                  offset="728"                 >
         </DataArray>
-        <DataArray type="Float64" Name="FIB_DIR" NumberOfComponents="3" format="appended" RangeMin="0.99987663248"        RangeMax="0.99987663248"        offset="600"                 >
+        <DataArray type="Float64" Name="FIB_DIR" NumberOfComponents="3" format="appended" RangeMin="0.99987663248"        RangeMax="0.99987663248"        offset="780"                 >
           <InformationKey name="L2_NORM_RANGE" location="vtkDataArray" length="2">
             <Value index="0">
               0.99987663248
@@ -45,52 +53,60 @@
             </Value>
           </InformationKey>
         </DataArray>
-        <DataArray type="Float64" Name="varWallProps" format="appended" RangeMin="0.6518075"            RangeMax="0.6518075"            offset="672"                 >
+        <DataArray type="Float64" Name="varWallProps" NumberOfComponents="6" format="appended" RangeMin="1.0775353658"         RangeMax="1.1142439075"         offset="848"                 >
+          <InformationKey name="L2_NORM_RANGE" location="vtkDataArray" length="2">
+            <Value index="0">
+              1.0775353658
+            </Value>
+            <Value index="1">
+              1.1142439075
+            </Value>
+          </InformationKey>
         </DataArray>
-        <DataArray type="Float64" Name="ids_inside" format="appended" RangeMin="0.5"                  RangeMax="0.5"                  offset="724"                 >
+        <DataArray type="Float64" Name="ids_inside" format="appended" RangeMin="0"                    RangeMax="0.5"                  offset="1048"                >
         </DataArray>
-        <DataArray type="Float64" Name="ids_y_zero" format="appended" RangeMin="0"                    RangeMax="0"                    offset="772"                 >
+        <DataArray type="Float64" Name="ids_start" format="appended" RangeMin="0.5"                  RangeMax="0.5"                  offset="1096"                >
         </DataArray>
-        <DataArray type="Float64" Name="ids_start" format="appended" RangeMin="0.5"                  RangeMax="0.5"                  offset="812"                 >
+        <DataArray type="Float64" Name="ids_y_zero" format="appended" RangeMin="0"                    RangeMax="0"                    offset="1144"                >
         </DataArray>
-        <DataArray type="Float64" Name="ids_x_zero" format="appended" RangeMin="0.5"                  RangeMax="0.5"                  offset="860"                 >
+        <DataArray type="Float64" Name="ids_x_zero" format="appended" RangeMin="0.5"                  RangeMax="0.5"                  offset="1184"                >
         </DataArray>
-        <DataArray type="Float64" Name="ids_outside" format="appended" RangeMin="0"                    RangeMax="0"                    offset="908"                 >
+        <DataArray type="Float64" Name="ids_outside" format="appended" RangeMin="0"                    RangeMax="0.5"                  offset="1232"                >
         </DataArray>
-        <DataArray type="Float64" Name="ids_end" format="appended" RangeMin="0.5"                  RangeMax="0.5"                  offset="948"                 >
+        <DataArray type="Float64" Name="ids_end" format="appended" RangeMin="0.5"                  RangeMax="0.5"                  offset="1276"                >
         </DataArray>
       </CellData>
       <Points>
-        <DataArray type="Float64" Name="Points" NumberOfComponents="3" format="appended" RangeMin="0.64678"              RangeMax="0.64747538054"        offset="996"                 >
+        <DataArray type="Float64" Name="Points" NumberOfComponents="3" format="appended" RangeMin="0.64678"              RangeMax="0.68765470987"        offset="1324"                >
           <InformationKey name="L2_NORM_RANGE" location="vtkDataArray" length="2">
             <Value index="0">
               0.64678
             </Value>
             <Value index="1">
-              0.64747538054
+              0.68765470987
             </Value>
           </InformationKey>
         </DataArray>
       </Points>
       <Verts>
-        <DataArray type="Int64" Name="connectivity" format="appended" RangeMin=""                     RangeMax=""                     offset="1136"                />
-        <DataArray type="Int64" Name="offsets" format="appended" RangeMin=""                     RangeMax=""                     offset="1152"                />
+        <DataArray type="Int64" Name="connectivity" format="appended" RangeMin=""                     RangeMax=""                     offset="1512"                />
+        <DataArray type="Int64" Name="offsets" format="appended" RangeMin=""                     RangeMax=""                     offset="1528"                />
       </Verts>
       <Lines>
-        <DataArray type="Int64" Name="connectivity" format="appended" RangeMin=""                     RangeMax=""                     offset="1168"                />
-        <DataArray type="Int64" Name="offsets" format="appended" RangeMin=""                     RangeMax=""                     offset="1184"                />
+        <DataArray type="Int64" Name="connectivity" format="appended" RangeMin=""                     RangeMax=""                     offset="1544"                />
+        <DataArray type="Int64" Name="offsets" format="appended" RangeMin=""                     RangeMax=""                     offset="1560"                />
       </Lines>
       <Strips>
-        <DataArray type="Int64" Name="connectivity" format="appended" RangeMin=""                     RangeMax=""                     offset="1200"                />
-        <DataArray type="Int64" Name="offsets" format="appended" RangeMin=""                     RangeMax=""                     offset="1216"                />
+        <DataArray type="Int64" Name="connectivity" format="appended" RangeMin=""                     RangeMax=""                     offset="1576"                />
+        <DataArray type="Int64" Name="offsets" format="appended" RangeMin=""                     RangeMax=""                     offset="1592"                />
       </Strips>
       <Polys>
-        <DataArray type="Int64" Name="connectivity" format="appended" RangeMin=""                     RangeMax=""                     offset="1232"                />
-        <DataArray type="Int64" Name="offsets" format="appended" RangeMin=""                     RangeMax=""                     offset="1296"                />
+        <DataArray type="Int64" Name="connectivity" format="appended" RangeMin=""                     RangeMax=""                     offset="1608"                />
+        <DataArray type="Int64" Name="offsets" format="appended" RangeMin=""                     RangeMax=""                     offset="1688"                />
       </Polys>
     </Piece>
   </PolyData>
   <AppendedData encoding="base64">
-   _AQAAAACAAABAAAAAIAAAAA==eJwzZoAAaRYILQOlTaDi06F0PVS8AUrPgIoDAE4AAt0=AQAAAACAAADAAAAAQgAAAA==eJxjjxExVls20YYBDD7YM0ABOw7xuIjvukKiC/a3CczV+/r7PUFxrq55PpaVq/ZAzdlPSFwXYo491ByC4gAApzCJAQAAAACAAABAAAAAEwAAAA==eJw7PK/sR/amJ/aHyaQBLCMoeQ==AQAAAACAAABAAAAAEAAAAA==eJxjYACBD/YMZNIAGmcJeQ==AQAAAACAAABAAAAADAAAAA==eJxjYKAMAAAAQAABAQAAAACAAABAAAAAFAAAAA==eJxjYACBD/YMWAFMHLc8AI1MBL0=AQAAAACAAABAAAAAEAAAAA==eJxjYACBD/YMZNIAGmcJeQ==AQAAAACAAABAAAAADAAAAA==eJxjYKAMAAAAQAABAQAAAACAAABAAAAAEwAAAA==eJxjYEAGH+xRaXSAKQ8AjUwEvQ==AQAAAACAAAAQAAAADgAAAA==eJwzZoCA6VAaAAf4AMs=AQAAAACAAAAQAAAADwAAAA==eJzrYWIAgw9QGgAQfAGBAQAAAACAAAAwAAAAJAAAAA==eJwLi/iuKyQ6Yb9Lh9/0X3/f2zNAgRBE3B4qvh8mDgCylw/5AQAAAACAAAAQAAAAEwAAAA==eJyLNf6ZNvv2E/tYKA0ASpoJEQ==AQAAAACAAAAQAAAAEAAAAA==eJxjYACBB/YMUBoADQYCPw==AQAAAACAAAAQAAAACwAAAA==eJxjYEAFAAAQAAE=AQAAAACAAAAQAAAAEAAAAA==eJxjYACBB/YMUBoADQYCPw==AQAAAACAAAAQAAAAEAAAAA==eJxjYACBB/YMUBoADQYCPw==AQAAAACAAAAQAAAACwAAAA==eJxjYEAFAAAQAAE=AQAAAACAAAAQAAAAEAAAAA==eJxjYACBB/YMUBoADQYCPw==AQAAAACAAADAAAAAVQAAAA==eJzbFMzsVH+lzebwvLIf2Zue2DNAwSY08R1yra8Dd8yzD/0WvWrt2Sn7zzafWH1uPW5xmDlH65oK4+UX7oGasx+XOMwcMYg59lBzcIrDzAEAPD9eTw==AAAAAACAAAAAAAAAAAAAAACAAAAAAAAAAAAAAACAAAAAAAAAAAAAAACAAAAAAAAAAAAAAACAAAAAAAAAAAAAAACAAAAAAAAAAQAAAACAAABAAAAAHgAAAA==eJxjYIAARijNBKWZoTQLlGaF0mxQmh1KAwAC4AAdAQAAAACAAAAQAAAADgAAAA==eJxjYYAADigNAACQAA0=
+   _AQAAAACAAABQAAAAJQAAAA==eJxLY4AAYyhtxAihU6H0TKj4DCj/DJR/Gsr/D+X/g/IByrMF+w==AQAAAACAAADwAAAAGwAAAA==eJxjjxExVls2cQ8DGHzYzwAF7MNUHABz7yx1AQAAAACAAADgAQAAqwAAAA==eJz7cbz66imWp/YMYHABSjMwKGtuy4zWb7f5gSLPwHB4XtmP7E1PMNRvCmZ2qr/SZoMqj0v9B3t09TvkWl8H7phn/wOrez7Yo7sHpl7nY8MmzXBM90/+lzHRvKvdBlWegQG7+g/26Oph5idKtfV3rMQ0n+WK9E7hp+02qPIMDNjVf7BHVw8zf5pzd87z35jml6489+C9fYcNqjwDA3b1H+zR1cPMBwCc+6TqAQAAAACAAABQAAAAEQAAAA==eJxjYEAGH+xRadIBAJKWAl8=AQAAAACAAABQAAAAFgAAAA==eJxjYACBD/YMKDQ6QBfHzQcAASoF7A==AQAAAACAAABQAAAADAAAAA==eJxjYKAuAAAAUAABAQAAAACAAABQAAAAEAAAAA==eJxjYACBD/YMVKIBv60L1w==AQAAAACAAABQAAAADwAAAA==eJxjYKAG+GAPowEOBgJfAQAAAACAAABQAAAAEwAAAA==eJxjYMAGPtij0ujiuPkAvtMF7A==AQAAAACAAAAgAAAAEwAAAA==eJwzYoCAFCg9DUqfgNIAH2AB9Q==AQAAAACAAAAgAAAAFAAAAA==eJw7wwAB/6G0ESOEToXSADfmAmU=AQAAAACAAABgAAAAHwAAAA==eJwrj/iuKyQ6Yb9zh9/0X3/f72eAgnIqiQMA/Yoi+Q==AQAAAACAAADAAAAAhAAAAA==eJyLNf6ZNvv2E/t17g+rRNadt2cAgwf2911ehwp/b7F/IrpVzevWE/sdcq2vA3f02U+K+ef8S/cphvo1DznX3vNstZeXf3B+sc5TuPoTrcyKkQ2Y6qvqNFhWzWm1j9Lgrvxbh1D/ex3Hv+2XMNV7SLtHl75vtZ9saKYUfhGhHgB54lT6AQAAAACAAAAgAAAAEAAAAA==eJxjYACBB/YMOAAAHQcBIA==AQAAAACAAAAgAAAAEAAAAA==eJxjYACBB/YMOGgAPewEfQ==AQAAAACAAAAgAAAACwAAAA==eJxjYMAPAAAgAAE=AQAAAACAAAAgAAAAEAAAAA==eJxjYACBB/YMOGgAPewEfQ==AQAAAACAAAAgAAAADgAAAA==eJxjYMAHHtgDAAIfASA=AQAAAACAAAAgAAAAEAAAAA==eJxjYACBB/YMOGgAPewEfQ==AQAAAACAAADwAAAAeQAAAA==eJxT1tyWGa3fbvPjePXVUyxP7RmgYFMws1P9lTabw/PKfmRveoJTfIdc6+vAHfPsldHMgYlP/pcx0byr3UbnY8MmzXCE+ejiMPUsV6R3Cj9tt0mUauvvWIlQjy4OU1+68tyD9/YdNtOcu3Oe/0aoRxeHqQcAyaBm7Q==AAAAAACAAAAAAAAAAAAAAACAAAAAAAAAAAAAAACAAAAAAAAAAAAAAACAAAAAAAAAAAAAAACAAAAAAAAAAAAAAACAAAAAAAAAAQAAAACAAACAAAAAKgAAAA==eJxjYIAARijNBKWZoTQLAyqAibNCaTY0dTBxdijNgaYOJs4JpQENmABHAQAAAACAAAAgAAAAEwAAAA==eJxjYYAADijNA6UFoDQAAqAAKQ==
   </AppendedData>
 </VTKFile>
