@@ -76,7 +76,7 @@ Add equation: struct {
       Absolute tolerance:   1e-6
       Max iterations:      1000
       Krylov space dimension: 1000
-      Preconditioner:  Trilinos-Diagonal
+      Preconditioner:  Trilinos-ILUT
    }
 
    Add BC: start {
