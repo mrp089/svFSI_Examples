@@ -5,10 +5,9 @@ Continue previous simulation: 0
 Number of spatial dimensions: 3
 Number of time steps: 11
 Time step size: 1.0
-Spectral radius of infinite time step: 0.0
 
 Save results to VTK format: 1
-Name prefix of saved VTK files: gr_mesh_tube
+Name prefix of saved VTK files: gr
 Increment in saving VTK files: 1
 Start saving after time step: 1
 
@@ -21,27 +20,27 @@ Debug: 0
 #----------------------------------------------------------------
 # Mesh data
 Add mesh: msh {
-   Mesh file path:    mesh_tube/mesh-complete.mesh.vtu
-   Fiber direction file path: mesh_tube/mesh-complete.mesh.vtu
+   Mesh file path:    mesh_tube_fsi/solid/mesh-complete.mesh.vtu
+   Fiber direction file path: mesh_tube_fsi/solid/mesh-complete.mesh.vtu
    Number of variable wall properties: 6
-   Variable wall properties file path: mesh_tube/mesh-complete.mesh.vtu
+   Variable wall properties file path: mesh_tube_fsi/solid/mesh-complete.mesh.vtu
    Add face: start {
-      Face file path: mesh_tube/mesh-surfaces/start.vtp
+      Face file path: mesh_tube_fsi/solid/mesh-surfaces/start.vtp
    }
    Add face: end {
-      Face file path: mesh_tube/mesh-surfaces/end.vtp
+      Face file path: mesh_tube_fsi/solid/mesh-surfaces/end.vtp
    }
    Add face: inside {
-      Face file path: mesh_tube/mesh-surfaces/inside.vtp
+      Face file path: mesh_tube_fsi/solid/mesh-surfaces/interface.vtp
    }
    Add face: outside {
-      Face file path: mesh_tube/mesh-surfaces/outside.vtp
+      Face file path: mesh_tube_fsi/solid/mesh-surfaces/outside.vtp
    }
    Add face: x_zero {
-      Face file path: mesh_tube/mesh-surfaces/x_zero.vtp
+      Face file path: mesh_tube_fsi/solid/mesh-surfaces/x_zero.vtp
    }
    Add face: y_zero {
-      Face file path: mesh_tube/mesh-surfaces/y_zero.vtp
+      Face file path: mesh_tube_fsi/solid/mesh-surfaces/y_zero.vtp
    }
    Mesh scale factor: 1.0
 }
@@ -52,7 +51,7 @@ Add equation: struct {
    Coupled: 1
    Min iterations: 1
    Max iterations: 20
-   Tolerance: 1e-9
+   Tolerance: 1e-8
 
    Constitutive model: GR_Equilibrated
    Density: 0.0
@@ -71,13 +70,13 @@ Add equation: struct {
       Fiber_direction: t
    }
 
-   LS type: BICG
+   LS type: GMRES
    {
-      Tolerance:           1e-16
-      Absolute tolerance:   1e-16
+      Tolerance:           1e-6
+      Absolute tolerance:   1e-6
       Max iterations:      1000
       Krylov space dimension: 1000
-      Preconditioner:  Trilinos-Diagonal
+      Preconditioner:  Trilinos-ILUT
    }
 
    Add BC: start {
@@ -115,7 +114,7 @@ Add equation: struct {
    Add BC: x_zero {
       Type: Dir
       Value: 0.0
-      Effective direction: (1, 0, 0)
+      Effective direction: (1, 0, 1)
       Impose on state variable integral: t
       Zero out perimeter: f
    }
@@ -123,7 +122,7 @@ Add equation: struct {
    Add BC: y_zero {
       Type: Dir
       Value: 0.0
-      Effective direction: (0, 1, 0)
+      Effective direction: (0, 1, 1)
       Impose on state variable integral: t
       Zero out perimeter: f
    }
